@@ -22,8 +22,8 @@ jobs:
           distribution: microsoft
           java-version: '17'
 
-      # - name: Build with Gradle
-      #   run: gradle clean build -p /myAirline
+      - name: Build with Gradle
+        run: gradle clean build -p /myAirline
 
       - name: Create .war file
         run: jar cf ${{ github.workspace }}/target/spring-boot.war . 
