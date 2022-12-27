@@ -3,11 +3,15 @@ run-name: ${{ github.actor }} is testing myAirline.
 on: [push]
 jobs:
   Spring-Api:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository 
         uses: actions/checkout@v3
+      - name: Set Java version
+        uses: actions/setup-java@v3.9.0
+        with: 
+          distribution: microsoft
+          java-version: '17'
       - name: Run every spring-boot test
-        run: cd myAirline | gradle clean build
-        # TODO: setup java 17 somehow
+        run: gradle clean build -p /myAirline

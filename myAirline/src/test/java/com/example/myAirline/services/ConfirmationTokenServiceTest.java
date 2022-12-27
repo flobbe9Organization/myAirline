@@ -21,7 +21,7 @@ import com.example.myAirline.models.ConfirmationToken;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@TestMethodOrder(OrderAnnotation.class)
+// @TestMethodOrder(OrderAnnotation.class)
 public class ConfirmationTokenServiceTest {
 
     @Autowired
@@ -38,7 +38,7 @@ public class ConfirmationTokenServiceTest {
                                         LocalDate.of(2001, 02, 12));
 
 
-    @Test
+    // @Test
     @Order(1)
     void testSaveConfirmationToken() {
         
@@ -52,7 +52,7 @@ public class ConfirmationTokenServiceTest {
     }
 
     
-    @Test
+    // @Test
     void testGetByToken() {
 
         ConfirmationToken confirmationToken = confirmationTokenService.saveConfirmationToken(new ConfirmationToken(LocalDateTime.now().plusMinutes(15), 
@@ -62,7 +62,7 @@ public class ConfirmationTokenServiceTest {
     }
     
     
-    @Test
+    // @Test
     void testConfirm() {
 
         ConfirmationToken confirmationToken = confirmationTokenService.saveConfirmationToken(new ConfirmationToken(LocalDateTime.now().plusMinutes(15), 

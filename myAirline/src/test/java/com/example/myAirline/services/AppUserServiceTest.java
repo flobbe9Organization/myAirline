@@ -21,7 +21,7 @@ import com.example.myAirline.models.AppUser;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@TestMethodOrder(OrderAnnotation.class)
+// @TestMethodOrder(OrderAnnotation.class)
 public class AppUserServiceTest {
     
     @Autowired
@@ -47,7 +47,7 @@ public class AppUserServiceTest {
     }
 
 
-    @Test
+    // @Test
     @Order(1)
     void testAddNew() { 
 
@@ -71,7 +71,7 @@ public class AppUserServiceTest {
     }
 
 
-    @Test
+    // @Test
     void testGetByEmail() {
 
         assertEquals(appUser, appUserService.getByEmail("florin.schikarski@gmail.com"));
