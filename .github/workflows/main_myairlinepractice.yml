@@ -25,7 +25,7 @@ jobs:
         run: gradle clean build -p /myAirline
 
       - name: Create .war file
-        run: jar cf target/spring-boot.war . 
+        run: jar cf ${{ github.workspace }}/target/spring-boot.war . 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
