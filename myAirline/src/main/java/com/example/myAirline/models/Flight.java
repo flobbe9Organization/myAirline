@@ -70,7 +70,7 @@ public class Flight {
                cascade = CascadeType.ALL,
                mappedBy = "flight")
     // @JsonManagedReference
-    @NotEmpty
+    // @NotEmpty
     private Set<Booking> bookings;
 
     @DateTimeFormat(iso = ISO.DATE_TIME)
