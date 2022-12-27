@@ -1,8 +1,8 @@
-# Compiled class file
-*.class
+### UML folder for planing
+**/UML
 
-# Log file
-*.log
+### VSCode
+.vscode
 
 # BlueJ files
 *.ctxt

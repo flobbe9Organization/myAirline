@@ -1,0 +1,13 @@
+name: myAirline
+run-name: ${{ github.actor }} is testing myAirline.
+on: [push]
+jobs:
+  Spring-Api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository 
+        uses: actions/checkout@v3
+      - name: Run every spring-boot test
+        run: cd myAirline | gradle clean build
+        # TODO: setup java 17 somehow
