@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>myAirline | Confirm your account</title>
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #confirm-button {
+                border-radius: 3pt;
+                border-color: rgb(68, 0, 255);
+                color: white;
+                font-size: 30px;
+                background-color: rgba(0, 0, 253, 0.822);
+                height: 75px;
+                width: 200px;
+            }
+
+            #confirm-button:active {
+                background-color: rgb(0, 45, 128);
+            }
+        </style>
+    </head>
+
+    <!-- Dont't change the order or number of the symbols for String.format()! -->
+    <body>
+        <p>
+            Hello %s, <br><br>
+
+            welcome to myAirline! Please confirm your account.<br><br>
+
+            <form action="http://localhost:4002/appUser/confirmAccount/%s">
+                <input type="submit" id="confirm-button" value="Confirm">
+            </form>
+            <br><br>
+        </p>
+    </body>
+
+    <footer>
+        <br><br><br>
+        Contact - About - Service
+    </footer>
+</html>

@@ -1,0 +1,10 @@
+test.mts
+
+### VSCode
+.vscode
+
+### Node
+node_modules
+
+### Docker ###
+Dockerfile
